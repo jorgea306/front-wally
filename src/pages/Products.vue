@@ -57,12 +57,7 @@ export default {
   },
   async mounted() {
     try {
-      const response = await this.axios.get("http://localhost:3000/profile", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
-
+      const response = await this.axios.get("http://localhost:3000/profile");
       storage.commit("setUsername", response.data.username);
     } catch (error) {
       var data = error.response.data;

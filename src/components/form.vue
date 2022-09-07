@@ -135,7 +135,6 @@ export default {
       formData.append("upload_preset", "uvrak5t6");
       formData.append("cloud_name", "dp1czofyb");
 
-      console.log(formData);
       let axiosUploadImage = this.axios.create();
       delete axiosUploadImage.defaults.headers.common["Authorization"];
       try {
@@ -144,7 +143,6 @@ export default {
           formData
         );
         this.pictures = response.data.secure_url;
-        console.log(this.pictures);
       } catch (error) {
         console.log(error);
       }
@@ -164,7 +162,6 @@ export default {
           "http://[::1]:3000/products",
           data
         );
-
         console.log(response);
         this.$router.push("/products");
       } catch (error) {

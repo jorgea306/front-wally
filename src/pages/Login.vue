@@ -115,7 +115,6 @@ export default {
         password: this.password,
       };
       this.msjerror = false;
-      console.log(this.msjerror);
       try {
         const response = await this.axios.post(
           "http://[::1]:3000/auth/login",
