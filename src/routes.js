@@ -1,13 +1,18 @@
-import HelloWorld from './components/HelloWorld.vue';
-import Login from './components/Login.vue';
+import Login from "./pages/Login.vue";
+import Products from "./pages/Products.vue";
+import altaProducts from "./pages/AltaProducts.vue";
 
 export default [
-    {
-        path: '/HelloWorld',
-        component: HelloWorld
-    },
-    {
-        path: '/Login',
-        component: Login
-    },
-]
+  {
+    path: "/",
+    component: Login,
+  },
+  {
+    path: "/products",
+    component: Products,
+  },
+  {
+    path: "/products/alta",
+    component: altaProducts,
+  },
+];
