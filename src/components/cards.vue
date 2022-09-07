@@ -43,9 +43,11 @@
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Cards",
-  data: () => ({
-    products: [],
-  }),
+  data() {
+    return {
+      products: [],
+    };
+  },
   async mounted() {
     try {
       const response = await this.axios.get("http://[::1]:3000/products");

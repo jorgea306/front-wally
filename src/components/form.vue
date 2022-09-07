@@ -116,17 +116,18 @@ export default {
     ValidationProvider,
     ValidationObserver,
   },
-  data: () => ({
-    SKU: "",
-    name: "",
-    pictures: "",
-    price: null,
-    currency: "",
-    code: null,
-    description: "",
-    imagen: null,
-  }),
-
+  data() {
+    return {
+      SKU: "",
+      name: "",
+      pictures: "",
+      price: null,
+      currency: "",
+      code: null,
+      description: "",
+      imagen: null,
+    };
+  },
   methods: {
     async submit() {
       this.$refs.observer.validate();
