@@ -3,7 +3,6 @@ import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
 import VueRouter from "vue-router";
 import routes from "./routes";
-import Cloudinary from "cloudinary-vue";
 import axios from "axios";
 import VueAxios from "vue-axios";
 import storage from "./storage";
@@ -13,13 +12,6 @@ var token = localStorage.getItem("token");
 if (token) {
   axios.defaults.headers.common["Authorization"] = "Bearer " + token;
 }
-
-Vue.use(Cloudinary, {
-  configuration: {
-    cloudName: "dp1czofyb",
-    secure: true,
-  },
-});
 
 Vue.use(VueRouter);
 
